@@ -1,13 +1,12 @@
 package src;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.List;
-import java.util.Set;
-
-public class tryingSelenium {
-    WebDriver driver = new ChromeDriver();
+public interface tryingSelenium {
+    static void main(String[] args ) {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Josh Hill\\Downloads\\chromedriver_win32\\chromedriver.exe");
+        loginMethods.driver.get("http://demo.guru99.com/test/newtours/");
+        loginMethods.driver.findElement(By.xpath(loginMethods.loginBox)).sendKeys("Joshua");
+        loginMethods.driver.findElement(By.xpath(loginMethods.pssWrdBox)).sendKeys("password");
+    }
 }
